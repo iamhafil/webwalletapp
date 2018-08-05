@@ -1,7 +1,7 @@
 App = {
   web3Provider: null,
   contracts: {},
-
+  eventsBinded : false,
   init: function() {
     // Load pets.
 
@@ -23,10 +23,24 @@ App = {
     $.getJSON('ErcToken.json', function(json, textStatus) {
       App.contracts.ErcToken = TruffleContract(json);
       App.contracts.ErcToken.setProvider(App.web3Provider);
+      //App.listenForEvents();
       return App.rendor();
     });
 
   },
+  
+  //Commented due to when this enabled getiing multiple cofirmation for single transaction
+  // listenForEvents: function() {
+  //   App.contracts.ErcToken.deployed().then(function(instance) {
+  //     instance.Transfer({}, {
+  //       fromBlock: 0,
+  //       toBlock: 'latest',
+  //     }).watch(function(error, event) {
+  //       console.log("event triggered", event);
+  //       App.rendor();
+  //     })
+  //   })
+  // },
 
   rendor: function(){
     var ErcToken;
@@ -45,21 +59,26 @@ App = {
         $("#buy_token_count").attr("max",totalSupply.toNumber());
         return ErcToken.initiatorAddress();
     }).then(function(initiatorAddress){
-      console.log(initiatorAddress);
       App.initiatorAddress = initiatorAddress;
+
+      if(App.account == App.initiatorAddress){
+        $("#buy_form").parent().parent(".panel").hide();
+      }
+
       return ErcToken.balanceOf(App.account);
     }).then(function(currentAccountBalance){
       $("#meta_mast_account_balance").text(currentAccountBalance.toNumber());
     });
 
-    return App.bindEvents();
+    if(!App.eventsBinded)
+      return App.bindEvents();
   },
 
   bindEvents: function() {
-    //$(document).on('click', '.btn-adopt', App.handleAdopt);
     $(document).on('submit', '#search_form', App.handleSearch);
     $(document).on('submit', '#buy_form', App.TransferToken);
     $(document).on('submit','#transfer_form',App.TransferToken);
+    App.eventsBinded = true;
   },
 
   TransferToken: function(e){
@@ -79,6 +98,7 @@ App = {
     App.contracts.ErcToken.deployed().then(function(instance){
       return instance.transfer(to,token,{from:from});
     }).then(function(result){
+
       $("#"+form).append(`
         <div class="alert alert-success">
           <strong>Success!</strong>
@@ -87,7 +107,9 @@ App = {
 
       setTimeout(function(){
         $("#"+form).find(".alert").remove();
-      },2000);
+        $("#"+form)[0].reset();
+        App.rendor();
+      },3000);
 
     }).catch(function(error) {
       console.log(error);

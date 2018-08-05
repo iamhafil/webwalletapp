@@ -27,9 +27,57 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-push-2">
-          <h3 class="text-center">Finlead Logiticks Blockchain Coding Challenge - Muhammed Hafil</h3>
+          <!--<h3 class="text-center">Finlead Logiticks Blockchain Coding Challenge - Muhammed Hafil</h3>-->
           <hr/>
           <br/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6" >
+          <div class="panel panel-info">
+            <div class="panel-heading">Transfer Tokens</div>
+            <div class="panel-body">
+              <form class="form-horizontal" id="transfer_form" style="">
+                <div class="form-group">
+                  <div class="col-md-12" >
+                    <label for="t_account">Account</label>
+                    <input type="text" id="transfer_account" class="form-control" placeholder="To Account">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-6" >
+                    <label for="token_count">Tokens</label>
+                    <input type="number" class="form-control" id="transfer_token_count" min="0" placeholder="Token count">
+                  </div>
+                  <div class="col-md-6" >
+                    <label>&nbsp</label>
+                    <button type="submit" class="btn btn-primary form-control">
+                      <i class="fa fa-check"></i> Transfer
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6" >
+          <div class="panel panel-info">
+            <div class="panel-heading">Active Account</div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-xs-3">Account</div>
+                <div class="col-xs-9" id="meta_mast_account"></div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-xs-3">Balance</div>
+                <div class="col-xs-9" id="meta_mast_account_balance"></div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
 
@@ -62,29 +110,10 @@
             </div>
           </div>
         </div>
+
         <div class="col-md-6" >
           <div class="panel panel-info">
-            <div class="panel-heading">Active Account</div>
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-xs-3">Account</div>
-                <div class="col-xs-9" id="meta_mast_account"></div>
-              </div>
-              <br>
-              <div class="row">
-                <div class="col-xs-3">Balance</div>
-                <div class="col-xs-9" id="meta_mast_account_balance"></div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6" >
-          <div class="panel panel-info">
-            <div class="panel-heading">Buy Tokens</div>
+            <div class="panel-heading">Buy Tokens - Not working as expected</div>
             <div class="panel-body">
               <form class="form-horizontal" id="buy_form" style="">
                 <div class="form-group">
@@ -104,33 +133,7 @@
           </div>
         </div>
 
-        <div class="col-md-6" >
-          <div class="panel panel-info">
-            <div class="panel-heading">Transfer Tokens</div>
-            <div class="panel-body">
-              <form class="form-horizontal" id="transfer_form" style="">
-                <div class="form-group">
-                  <div class="col-md-12" >
-                    <label for="t_account">Account</label>
-                    <input type="text" id="transfer_account" class="form-control" placeholder="To Account">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="col-md-6" >
-                    <label for="token_count">Tokens</label>
-                    <input type="number" class="form-control" id="transfer_token_count" min="0" placeholder="Token count">
-                  </div>
-                  <div class="col-md-6" >
-                    <label>&nbsp</label>
-                    <button type="submit" class="btn btn-primary form-control">
-                      <i class="fa fa-check"></i> Transfer
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
+
 
       </div>
 

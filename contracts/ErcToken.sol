@@ -20,8 +20,6 @@ contract ErcToken{
     totalSupply = _initialSupply;
     balanceOf[msg.sender] = _initialSupply;
     initiatorAddress = msg.sender;
-    emit Transfer(address(this), msg.sender, _initialSupply);
-
   }
 
   function transfer(address _to,uint256 _value)public returns (bool success){
