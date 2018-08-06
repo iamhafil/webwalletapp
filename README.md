@@ -19,6 +19,6 @@
 
 * Ropsten contract address and transaction - created from remix
 
-    [Account](https://ropsten.etherscan.io/address/0x8893366e2c4b9944728660852bfbe6fc2d3b4ae8).
+    [Account - https://ropsten.etherscan.io/address/0x8893366e2c4b9944728660852bfbe6fc2d3b4ae8 ](https://ropsten.etherscan.io/address/0x8893366e2c4b9944728660852bfbe6fc2d3b4ae8).
 
-    [Transaction](https://ropsten.etherscan.io/tx/0x1a43433a920c045d4d501e58b26b256d3b6579a901519c2f85abff4192955787).
+    [Transaction - https://ropsten.etherscan.io/tx/0x1a43433a920c045d4d501e58b26b256d3b6579a901519c2f85abff4192955787](https://ropsten.etherscan.io/tx/0x1a43433a920c045d4d501e58b26b256d3b6579a901519c2f85abff4192955787).
