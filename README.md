@@ -17,8 +17,8 @@
 * Test procedure in video
     [Download](https://github.com/iamhafil/webwalletapp/blob/master/src/images/walletTestResult.mp4).
 
-* Ropsten ether accounts i created
+* Ropsten contract address and transaction - created from remix
 
-    [https://ropsten.etherscan.io/address/0x33ab6576a3daf2ea847f4a75b4336c1da450c065](https://ropsten.etherscan.io/address/0x33ab6576a3daf2ea847f4a75b4336c1da450c065).
+    [Account](https://ropsten.etherscan.io/address/0x8893366e2c4b9944728660852bfbe6fc2d3b4ae8).
 
-    [https://ropsten.etherscan.io/address/0x2752865e00a7ac764302af5baa30E5bA8EB9C9E8](https://ropsten.etherscan.io/address/0x2752865e00a7ac764302af5baa30E5bA8EB9C9E8).
+    [Transaction](https://ropsten.etherscan.io/tx/0x1a43433a920c045d4d501e58b26b256d3b6579a901519c2f85abff4192955787).
